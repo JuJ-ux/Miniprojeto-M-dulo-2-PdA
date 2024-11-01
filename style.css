@@ -6,7 +6,7 @@
   }
 
 body {
-    background-image:url(/Cadastro_Cliente/fundoDoSite.jpg);
+    background-image:url(/fundoDoSite.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,15 +15,39 @@ body {
   }
   main {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    background-color: rgb(152, 185, 113);
-    border-radius: 10px;
 }
 input{
     background-color: rgb(247, 210, 165);
     border-radius: 8px;
+    height: 20px;
+}
+#botaosub{
+  background-color: bisque;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 20px;
+  width: 60px;
+  border-radius: 8px;
+}
+#todasInfos{
 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 2rem;
+   padding: 40px;
+   background-color: rgb(152, 185, 113);
+   border-radius: 10px;
+
+}
+#entrada{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 20px;
+  background-color: rgb(200, 220, 180); /* Cor diferente */
+  border-radius: 8px;
 }
