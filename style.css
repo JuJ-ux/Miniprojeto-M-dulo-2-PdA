@@ -6,7 +6,7 @@
   }
 
 body {
-    background-image:url(/fundoDoSite.jpg);
+    background-image:url(/Cadastro_Cliente/fundoDoSite.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,7 @@ input{
     border-radius: 8px;
     height: 20px;
 }
-#botaosub{
+#botaoSub{
   background-color: bisque;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 20px;
