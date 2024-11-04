@@ -21,13 +21,31 @@ input{
     border-radius: 8px;
     height: 20px;
 }
-#botaoSub{
+/* Botões */
+#btn1{
   background-color: bisque;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 20px;
   width: 60px;
   border-radius: 8px;
+  cursor: pointer;
 }
+#btn1:hover{
+background-color: rgb(250, 186, 107);
+}
+
+#btn2{
+  background-color: rgb(230, 86, 86);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 20px;
+  width: 60px;
+  border-radius: 8px;
+  cursor:pointer;
+}
+#btn2:hover{
+  background-color: rgb(224, 32, 32);
+}
+/* A entrada de informações e "saída" */
 #todasInfos{
 
    display: flex;
@@ -48,6 +66,7 @@ input{
   align-items: center;
   gap: 1.5rem;
   padding: 20px;
-  background-color: rgb(200, 220, 180); /* Cor diferente */
+  background-color: rgb(200, 220, 180);
   border-radius: 8px;
 }
+
