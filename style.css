@@ -15,38 +15,28 @@ body {
   }
   main {
     display: flex;
+    flex-direction: column;
 }
 input{
     background-color: rgb(247, 210, 165);
     border-radius: 8px;
     height: 20px;
+    padding: 15px;
 }
-/* Botões */
-#btn1{
+
+#btn{
   background-color: bisque;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  height: 20px;
-  width: 60px;
+  height: 30px;
+  width: 65px;
   border-radius: 8px;
   cursor: pointer;
 }
-#btn1:hover{
+#btn:hover{
 background-color: rgb(250, 186, 107);
 }
 
-#btn2{
-  background-color: rgb(230, 86, 86);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  height: 20px;
-  width: 60px;
-  border-radius: 8px;
-  cursor:pointer;
-}
-#btn2:hover{
-  background-color: rgb(224, 32, 32);
-}
-/* A entrada de informações e "saída" */
-#todasInfos{
+#listaClientes{
 
    display: flex;
    flex-direction: column;
@@ -56,7 +46,6 @@ background-color: rgb(250, 186, 107);
    padding: 40px;
    background-color: rgb(152, 185, 113);
    border-radius: 10px;
-
 }
 #entrada{
 
@@ -70,3 +59,13 @@ background-color: rgb(250, 186, 107);
   border-radius: 8px;
 }
 
+.btnExcluir{
+  background-color: rgb(230, 86, 86);
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btnExcluir:hover{
+  background-color:rgb(224, 32, 32);
+}

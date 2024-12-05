@@ -10,26 +10,20 @@
     <main>
     <section id="entrada">
         <h1>Matrícula para o Curso</h1>
-        <h1>de Jardinagem</h1>
         </h1>
         <label>Nome Completo</label>
-        <input id="nomeCliente" placeholder="Nome">
+        <input id="nomeCliente" placeholder="Nome" required>
         <label>Data de Nascimento</label>
-        <input id="dataCliente" type="date" placeholder="Data aqui">
+        <input id="dataCliente" type="date" placeholder="Data aqui" required>
         <label>Email</label>
-        <input id="emailCliente" type="email" placeholder="Digite seu email">
-        <label>Número de telefone</label> 
-        <input id="numCliente" type="tel" placeholder="(xx) xxxxx-xxxx">
-        <button type="submit" id="btn1">Enviar</button>
+        <input id="emailCliente" type="email" placeholder="Digite seu email" required>
+        <button type="submit" id="btn">Enviar</button>
     </section>
-        <section id="todasInfos">
+        <section id="listaClientes">
             <h1>Informações</h1>
-            <label>Nome do cliente:</label><span class="span"></span>
-            <label>Data de Nascimento:</label><span class="span"></span>
-            <label>Email:</label><span class="span"></span>
-            <label>Número:</label><span class="span"></span>
-            
-            <button id="btn2" type="reset">Excluir</button>
+            <ul id = "list">
+                
+            </ul>
         </section>
     </main>
     <script src="script.js"></script>

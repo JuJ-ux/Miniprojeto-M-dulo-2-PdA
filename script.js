@@ -1,43 +1,58 @@
 const infos = {
-nome: document.getElementById("nomeCliente"),
-data: document.getElementById("dataCliente"),
-email: document.getElementById("emailCliente"),
-numero: document.getElementById("numCliente")
-};
-const botao= document.getElementById("btn1")
-const spans= document.querySelectorAll(".span")
-const btnDelete= document.getElementById("btn2") 
+    nome: document.getElementById("nomeCliente"),
+    data: document.getElementById("dataCliente"),
+    email: document.getElementById("emailCliente"),
+    };
 
-class NovaInfo {
-    constructor (nomeCliente, dataCliente, emailCliente,numCliente){
-        this.nomeCliente= nomeCliente;
-        this.dataCliente= dataCliente;
-        this.emailCliente= emailCliente;
-        this.numCliente= numCliente;
+const lista =document.getElementById("list");
+const btn= document.getElementById("btn");
+
+
+let informacoes = [];
+
+function validar(){  
+
+if (infos.nome.value ==="" || infos.data.value === ""|| infos.email.value ===""){
+        alert("Todos os campos precisam ser preenchidos");
+        return;
     }
-mostrar(){
-    spans[0].innerText= this.nomeCliente;
-    spans[1].innerText= this.dataCliente;
-    spans[2].innerText= this.emailCliente;
-    spans[3].innerText= this.numCliente;
+
+ const novoDado={
+nome: infos.nome.value,
+data: infos.data.value,
+email: infos.email.value,
+ }
+
+adicionar(); 
+
+informacoes.push(novoDado)
 }
 
-exluir(){
-    spans.forEach(span=> span.innerText="")
-}
-}
-// eventos para adicionar a informação e deletá-las
-botao.addEventListener("click", () => {
-    const novaInfo = new NovaInfo(
-      infos.nome.value,
-      infos.data.value,
-      infos.email.value,
-      infos.numero.value
-    );
-    novaInfo.mostrar();
-});
+function adicionar() {
+lista.innerHTML="";
 
-btnDelete.addEventListener("click",()=>{
-    const novaInfo=new NovaInfo();
-    novaInfo.exluir();
+informacoes.forEach((dado,index) =>{
+
+  const item = document.createElement("li");
+  item.textContent = `${dado.nome}| ${dado.data} | ${dado.email}`
+    
+  const btnExcluir = document.createElement("button")
+  btnExcluir.textContent = "Excluir";
+
+  btnExcluir.onclick = () => excluir (index)
+
+  btnExcluir.classList.add("btnExcluir")
+
+  item.appendChild(btnExcluir);
+
+  lista.appendChild (item)
 });
+}
+
+function excluir (index){
+
+    informacoes.splice(index,1);
+
+    adicionar()
+}
+btn.addEventListener("click", validar);
